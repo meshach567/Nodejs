@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "type": "module",
+  "type": "commonjs",
   "scripts": {
-    "start": "tsc && node dist/index.js",
+    "start": "tsc && node dist/index.cjs",
     "dev": "nodemon index.ts"
   },
   "keywords": [],
