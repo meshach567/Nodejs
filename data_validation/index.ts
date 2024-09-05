@@ -1,8 +1,6 @@
 import express, { query } from 'express';
 import { users } from './data';
 import {
-    param, check,
-    body,
     validationResult,
     matchedData,
     checkSchema,
