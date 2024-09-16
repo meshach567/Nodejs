@@ -25,3 +25,11 @@ const storage = multer.diskStorage({
 const upload = multer({ storage });
 
 app.use('/uploads', express.static(path.join(__dirname, 'filestorage')));
+
+app.get('/', (req, res) => {
+    res.render('index')
+})
+
+app.post('/uploads', upload.single('file'), (req, res) => {
+    res.redirect('/')
+})
