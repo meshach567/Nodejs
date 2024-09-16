@@ -1,0 +1,25 @@
+{
+  "name": "fileupload",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "tsc && node dist/app.js",
+    "dev": "nodemon src/app.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/multer": "^1.4.12",
+    "nodemon": "^3.1.4",
+    "typescript": "^5.6.2"
+  },
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^5.0.0",
+    "multer": "^1.4.5-lts.1"
+  }
+}
