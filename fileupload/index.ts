@@ -15,4 +15,13 @@ const storage = multer.diskStorage({
     destination: (req, file, cb) => {
         cb(null, 'filestorage/' );
     },
-})
+
+    filename: (req, file, cb) => {
+        const fileName = `${Date.now()}-${file.originalname}`;
+        cb(null, fileName)
+    }
+});
+
+const upload = multer({ storage });
+
+app.use('/uploads', express.static(path.join(__dirname, 'filestorage')));
