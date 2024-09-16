@@ -33,3 +33,4 @@ app.get('/', (req, res) => {
 app.post('/uploads', upload.single('file'), (req, res) => {
     res.redirect('/')
 })
+
