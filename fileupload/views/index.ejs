@@ -1,16 +1,27 @@
+// index.ejs
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" 
+          content="width=device-width, initial-scale=1.0">
     <title>File Storage App</title>
-    <script src= "https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.4/umd/popper.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.min.js"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" rel="stylesheet">
+    <script src=
+"https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.4/umd/popper.min.js">
+    </script>
+    <script src=
+"https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.min.js">
+    </script>
+    <link href=
+"https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" 
+          rel="stylesheet">
+
+    <link href=
+"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" 
+          rel="stylesheet">
 </head>
 <body>
-    <div class="container"></div>
+    <div class="container">
         <h1 class="mt-5 text-success">GeeksForGeeks File Storage</h1>
 
         <h2 class="mt-4">Upload File</h2>
@@ -30,13 +41,16 @@
                         class="form-select">
                 </select>
             </div>
-            <button type="button" class="btn btn-danger" onclick="deleteFile()">Delete</button>
+            <button type="button" class="btn btn-danger" 
+                    onclick="deleteFile()">Delete</button>
         </form>
 
         <h2 class="mt-4">Uploaded Files</h2>
         <ul id="fileList" class="list-group">
         </ul>
     </div>
+
+
 
     <script>
         function populateFileListWithIcons() {
