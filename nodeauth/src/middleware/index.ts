@@ -1,8 +1,8 @@
 import express from 'express';
 import { getUsersBySessionToken } from '../model/usermodel.js';
 
-import pkg, { get } from 'lodash';
-const { merge } = pkg;
+import pkg from 'lodash';
+const { merge, get } = pkg;
 
 export const admin = async (req: express.Request, res: express.Response, next: express.NextFunction) => {
     try {
