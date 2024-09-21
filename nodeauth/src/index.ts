@@ -5,7 +5,7 @@ import cookieParser from 'cookie-parser';
 import compression from 'compression';
 import cors from 'cors';
 import mongoose from 'mongoose';
-import { error } from 'console';
+import router from './routes/index.js'
 
 const app = express();
 
@@ -28,3 +28,5 @@ server.listen(8080, () => {
 mongoose.Promise = Promise;
 mongoose.connect(process.env.MONGODB_URL);
 mongoose.connection.on('error', (error: Error) => console.log(error))
+
+app.use('/', router())
