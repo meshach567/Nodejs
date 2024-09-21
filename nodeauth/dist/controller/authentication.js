@@ -11,16 +11,17 @@ export const login = async (req, res) => {
             return res.sendStatus(400);
         }
         const expectedHash = authentication(user.authentication.salt, password);
-        if (user.authentication.password === expectedHash) {
+        if (user.authentication.password !== expectedHash) {
             return res.sendStatus(403);
         }
         const salt = random();
         user.authentication.sessionToken = authentication(salt, user._id.toString());
         await user.save();
-        res.cookie('NODEAUTH', user.authentication.sessionToken, { domain: 'localhost', path: '/' });
+        res.cookie('NODEAUTH-AUTH', user.authentication.sessionToken, { domain: 'localhost', path: '/' });
         return res.status(200).json(user).end();
     }
     catch (error) {
+        return res.sendStatus(400);
     }
 };
 export const register = async (req, res) => {
