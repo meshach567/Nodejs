@@ -5,7 +5,7 @@
   "type": "module",
   "module": "module",
   "scripts": {
-   "compile": "tsc",
+    "compile": "tsc",
     "start": "npm run compile && node ./dist/index.js",
     "build": "tsc",
     "dev": "nodemon index.ts"
@@ -31,6 +31,7 @@
     "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
     "express": "^4.21.0",
-    "http": "^0.0.1-security"
+    "http": "^0.0.1-security",
+    "mongoose": "^8.6.3"
   }
 }
