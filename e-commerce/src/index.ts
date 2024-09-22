@@ -6,11 +6,11 @@ import { PrismaClient } from '@prisma/client';
 
 const app: Express = express();
 
+app.use(express.json());
+
 app.use('/api', rootRouter); 
 
-export const prismaClient = PrismaClient({
-    log: ['query']
-})
+export const prismaClient = new PrismaClient({ log: ["query"]});
 
 const server = http.createServer(app);
 
