@@ -1,14 +1,19 @@
 import express, { Express } from 'express';
 import http from 'http';
+import { PORT } from './secrets.js';
+import rootRouter from './routes/rootRouter.js';
+import { PrismaClient } from '@prisma/client';
 
 const app: Express = express();
 
-app.get('/', (req: express.Request, res: express.Response) => {
-    res.send('working')
-});
+app.use('/api', rootRouter); 
+
+export const prismaClient = PrismaClient({
+    log: ['query']
+})
 
 const server = http.createServer(app);
 
-server.listen(8080, () => {
-    console.log('server is running on http://localhost:8080')
+server.listen(PORT, () => {
+    console.log(`server is running on http://localhost:${PORT}`)
 })

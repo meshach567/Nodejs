@@ -19,7 +19,7 @@ model Admin {
   email String @unique
   password String
   createdAt DateTime @default(now())
-  updatedAt DateTime @default
+  updatedAt DateTime @updatedAt
 
-  @@map{"admin}
+  @@map("admin")
 }

@@ -1,11 +1,11 @@
 import express from 'express';
 import http from 'http';
+import { PORT } from './secrets.js';
+import rootRouter from './routes/rootRouter.js';
 const app = express();
-app.get('/', (req, res) => {
-    res.send('working');
-});
+app.use('/api', rootRouter);
 const server = http.createServer(app);
-server.listen(8080, () => {
-    console.log('server is running on http://localhost:8080');
+server.listen(PORT, () => {
+    console.log(`server is running on http://localhost:${PORT}`);
 });
 //# sourceMappingURL=index.js.map
