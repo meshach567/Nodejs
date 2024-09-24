@@ -8,7 +8,7 @@ CREATE TABLE "admin" (
     "updatedAt" TIMESTAMP(3) NOT NULL,
 
     CONSTRAINT "admin_pkey" PRIMARY KEY ("id")
-);
+);y
 
 -- CreateIndex
 CREATE UNIQUE INDEX "admin_email_key" ON "admin"("email");
