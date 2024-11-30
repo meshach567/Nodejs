@@ -1,0 +1,6 @@
+POST  http://localhost:3000/users
+
+{
+  "username": "Meshach Arinze",
+  "email": "admin@example.com"
+}
